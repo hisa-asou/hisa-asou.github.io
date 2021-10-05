@@ -1,0 +1,162 @@
+[
+{
+	"uri": "http://example.org/introduction/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 1 Introduction Hugoの紹介をします。\n\rHugoとは\r\r\r\r\r"
+},
+{
+	"uri": "http://example.org/how-to-use/%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%BF%BD%E5%8A%A0/",
+	"title": "ホームページの追加",
+	"tags": ["foo", "bar"],
+	"description": "",
+	"content": "ホームページに自分の文章を入れる   _index.md を作る。ルートディレクトで以下を実行。\n$ hugo new _index.md   content/_index.md というファイルができる。\n--- title: \u0026#34;\u0026#34; date: 2021-09-10T15:32:15+09:00 draft: true ---   上記のようにヘッダ（Front matterと呼ぶ）が自動生成されるので、その下にMarkdown文法で内容を追記する。\n--- title: \u0026#34;ホームページの追加\u0026#34; date: 2021-09-10T16:53:07+09:00 draft: true weight: 10 tags: [\u0026#34;foo\u0026#34;, \u0026#34;bar\u0026#34;] --- ### ホームページに自分の文章を入れる * _index.md を作る。ルートディレクトで以下を実行。 ```shell $ hugo new _index.md ``` * content/_index.md というファイルができる。 ```toml --- title: \u0026#34;\u0026#34; date: 2021-09-10T15:32:15+09:00 draft: true --- ``` * 上記のようにヘッダ（Front matterと呼ぶ）が自動生成されるので、その下にMarkdown文法で内容を追記する。   "
+},
+{
+	"uri": "http://example.org/introduction/hugo%E3%81%A8%E3%81%AF/",
+	"title": "Hugoとは",
+	"tags": [],
+	"description": "",
+	"content": "HUGOとは TBD\nドキュメントツールとしてのPros\u0026amp;Cons Pros  導入が比較的簡単。 Markdown なのでポータビリティはまあまあ高い。 見た目にこだわらなければ、労力をかけずにそこそこきれいなものができる。 テキストファイルなので、Git等によるコンテンツ管理が容易そう。 Webブラウザでほぼリアルタイムにプレビューを見ながら作業できる。  Cons  ファイルが多くなりがち、その分管理が煩雑になるかも コンテンツファイルはMarkdownだが、Hugo特有の記載も混ざり込む。こんな感じの制御用ヘッダ(Front Matterという部分) --- title: \u0026quot;Hugoとは\u0026quot; date: 2021-09-10T15:44:46+09:00 draft: true weight: 10 --- ## HUGOとは TBD ## ドキュメントツールとしてのPros\u0026amp;Cons  同様に、Theme特有の記載も混入するので、Theme の変更もそれなりに手間と思われる。 文書作成はテキストエディタなので、Confluence等に比べるとリッチテキストの編集サポート機能は低い html コンテンツを作成することはできるが、公開は別途仕掛けが必要。例えばこの文書自体もどうやって共有するのが良いか？  Even   表現力は、良くも悪くもMarkdown。\n  スタイルの統一も一長一短。 統一感を出すには、使用する見出しレベルその他の規約を決める必要がある。 しかしフォントその他の体裁はcssで統一的に制御できる。\n  Mermail.js で簡単な絵が描けるとはいえ、そんな高度なのはできなさそう。文章以外の図表をどうするかは課題。\n 添付ファイルは貼れるが、ダウンロードして参照するのは一手間かかる。    "
+},
+{
+	"uri": "http://example.org/install-and-setting/",
+	"title": "Install and setting",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 2 Install and setting Hugoと、Learnテーマのインストールと設定方法について説明します。\n\r準備\r\r\r\r\rHugoのインストール\r\r\r\r\rLearnテーマのインストール\r\r\r\r\r"
+},
+{
+	"uri": "http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%BF%BD%E5%8A%A0/",
+	"title": "ページの追加",
+	"tags": ["bar", "baz"],
+	"description": "",
+	"content": "ページの追加   ページは、content 直下のディレクトリ構造で階層的に作れる。\n  ページの追加には hugo new コマンドを使う。\n  例えば、Introduction という第1階層の下に、readme.md というページを作るとすると、ルートディレクトリ上で以下のコマンドを実行する。\n$ hugo new Introduction/readme.md   上記で、content の下に Introduction というディレクトリができ、その下に readme.md というファイルができる。\n  中身は、このファイルにMarkdownで書いていけば良い。\n  生成されたmdには、以下のようなヘッダ情報が出力される。この部分を「front matter」と呼ぶ。\n front matterは TOML/YAML/JSONなどの形式で書ける（デリミタが\u0026mdash;ならYAML、+++ならTOMLのように） --- title: \u0026#34;\u0026#34; date: 2021-09-10T15:32:15+09:00 draft: true ---     ファイル名やディレクトリ名を間違えたら？\n 単に content 配下のディレクトリ名やファイル名を直せば良い。 hugo new を使うと、ヘッダ部(front matter)があらかじめ設定されたひな形ができるが、それだけのようだ（はっきりとは分からないが） だから、既に作ったページを単にコピーしてファイル名を変えれば新しいページが追加できる。    セクション Content 配下のディレクトリには、セクションと呼ばれるものがある。セクションとして扱われる条件は以下のいずれか。\n Content直下（第一階層） ディレクトリ内に _index.md を含む。  セクションにすると、セクションリスト(Learnテーマで左側にあるやつ)の階層として表示される。\n"
+},
+{
+	"uri": "http://example.org/install-and-setting/%E6%BA%96%E5%82%99/",
+	"title": "準備",
+	"tags": [],
+	"description": "",
+	"content": "あると良いツール  Git for windows  この説明ではGitでLearn Themeをインストールするので必須。なくてもできるとは思う。 git clone 実行時に「filename too long」というFatal Errorで失敗したことがあるので、Gitを新規に導入した場合は以下の設定を行う。  管理者モードで git bash を起動 以下を実行 $ git config --system core.longpaths true      Markdown作成をサポートする機能のあるエディタ（VS Codeなど）  "
+},
+{
+	"uri": "http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E9%A0%86%E5%BA%8F%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B/",
+	"title": "ページの順序を指定する",
+	"tags": ["bar"],
+	"description": "",
+	"content": "同一レベルのメニュー階層およびページの順序を指定する  各 md ファイルに、weight パラメータを設定する。  --- title: \u0026#34;Introduction\u0026#34; date: 2021-09-11T17:26:36+09:00 draft: true weight: 10 # この行を追加 ---  同じ階層であれば、weight の値が小さい方が上になる。 階層を表すフォルダの順序は、そのフォルダ直下にある _index.md に weight パラメータを書く。_index.md は自動では作られないので自分で作る。 順序の設定方法はほかにもいろいろありそうだが、とりあえず分かりやすい方法で。  "
+},
+{
+	"uri": "http://example.org/how-to-use/",
+	"title": "How to Use",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 3 How to Use Hugo/Learnを使ったコンテンツ作成について説明します。\n\rホームページの追加\r\r\r\r\rページの追加\r\r\r\r\rページの順序を指定する\r\r\r\r\rスタイルのカスタマイズ\r\r\r\r\rコンテンツのデプロイ\r\r\r\r\rページの表現方法\r\r\r\r\rページの表現方法（Learnテーマ）\r\r\r\r\rページの表現方法（Docsyテーマ）\r\r\r\r\rタグ\r\r\r\r\r画像を貼る\r\r\r\r\r"
+},
+{
+	"uri": "http://example.org/how-to-use/%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/",
+	"title": "スタイルのカスタマイズ",
+	"tags": [],
+	"description": "",
+	"content": "参考ページ  ここに記載あり  https://learn.netlify.app/en/basics/style-customization/    ロゴの変更(Learn)   layouts/partials/logo.html というファイルを作り、img タグや SVGを書く。igmなどで参照する画像は static の下に置く。\n  例\n\u0026lt;img border=\u0026#34;0\u0026#34; src=\u0026#34;ulsystems-logo.png\u0026#34;\u0026gt;   Homeページ以外ではロゴが表示されないな… 要調査\n  Favicon(Learn)  ファビコンのpngを static/images/favicon.png という名前で置く  デフォルトカラーの変更(Learn)   red, green, blue から選べる。\n  これ以外に自分でも定義できる。(https://learn.netlify.app/en/basics/style-customization/ の「\u0026lsquo;Yours\u0026rsquo; variant」)\n  config.toml に以下を記載(blueの場合)\n[params] # Change default color scheme with a variant one. Can be \u0026#34;red\u0026#34;, \u0026#34;blue\u0026#34;, \u0026#34;green\u0026#34;. themeVariant = \u0026#34;blue\u0026#34;   フォント等の変更（css変更） (Hugo) css をオーバーライドしてスタイルを変更する。\n  static ディレクトリの下に css ファイルを置く。例えば static/css/custom-css.css\n  config.toml で css ファイルを指定\n[params] custom_css = [\u0026#34;css/custom-css.css\u0026#34;]   カスタムcss の記述例: 見出しと本文のフォント変更、h2 以降の見出しに下線など\nbody, h1, h2, h3, h4, h5, h6 { font-family:\u0026quot;BIZ UDPゴシック\u0026quot;; } h2, h3, h4, h5, h6 { text-decoration: underline; }   "
+},
+{
+	"uri": "http://example.org/how-to-use/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4/",
+	"title": "コンテンツのデプロイ",
+	"tags": [],
+	"description": "",
+	"content": "コンテンツのデプロイ  引数なし、または -Dオプションだけ付けて hugo コマンドを実行する。  $ hugo -D  -D は、Draft のページも出力するオプション。 このコマンドを実行すると、public というディレクトができ、その配下にコンテンツができる。 このファイルをHTTPサーバのコンテンツのフォルダ(例えば nginx/html )にコピーすると、コンテンツが表示できる。 しかし例えばプロジェクト内でドキュメントをシェアするときはどうする？  "
+},
+{
+	"uri": "http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%A1%A8%E7%8F%BE%E6%96%B9%E6%B3%95/",
+	"title": "ページの表現方法",
+	"tags": [],
+	"description": "",
+	"content": "基本  Markdownの文法が使える。 全部試してないけどたぶん見出し、箇条書き、強調、下線、取り消し線、引用、コードブロック、水平線…は書けるだろう  表 | 左寄せ | 中央寄せ | 右寄せ | |:---------|:--------:|---------:| | 朝日新聞 | 読売新聞 | 産経新聞 |    左寄せ 中央寄せ 右寄せ     朝日新聞 読売新聞 産経新聞    他ページへのリンク   contents からの相対パスで簡単に参照できるようだ。\n参照→[Hugoのインストール]({{＜ ref \u0026#34;/Install and setting/Hugoのインストール.md\u0026#34; \u0026gt;}}) # (コピペする場合は＜を半角の \u0026lt; にしてください。文字化けしてしまうので全角にしています)   参照→Hugoのインストール\n部分的に文字の色を変える   Markdownには色を変える文法はないので、HTMLで記述する。デフォルトだとHugoのパーサがHTMLタグを削ってしまうので、config.tomlに以下を記載（コンテンツ全体に効いちゃうので注意）\n[markup.goldmark.renderer] unsafe= true   文字の色を変える部分の記述\nここだけ\u0026lt;span style=\u0026#34;color: blue; \u0026#34;\u0026gt;青色\u0026lt;/span\u0026gt;の文字 ここだけ青色の文字\n  Shortcodeとかでもっと簡便に書く工夫もできるようだけど、あまり特殊表記入れたくないからとりあえずこれで。\n  図  Mermaidで図が描ける！  フローチャート # なんかコードブロックがうまく表示できない。。 先頭と最後の行の { が2つ続いている間のスペースは実際はなしです。 { {\u0026lt;mermaid align=\u0026#34;left\u0026#34;\u0026gt;}} graph LR; A[Hard edge] --\u0026gt;|Link text| B(Round edge) B --\u0026gt; C{Decision} C --\u0026gt;|One| D[Result one] C --\u0026gt;|Two| E[Result two] { {\u0026lt; /mermaid \u0026gt;}} \rgraph LR; A[Hard edge] --|Link text| B(Round edge) B -- C{Decision} C --|One| D[Result one] C --|Two| E[Result two] \rガントチャート { {\u0026lt; mermaid \u0026gt;}} gantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2014-01-06,2014-01-08 Active task :active, des2, 2014-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2014-01-06,24h Implement parser and jison :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d { {\u0026lt; /mermaid \u0026gt;}} \rgantt dateFormat YYYY-MM-DD title Adding GANTT diagram functionality to mermaid section A section Completed task :done, des1, 2014-01-06,2014-01-08 Active task :active, des2, 2014-01-09, 3d Future task : des3, after des2, 5d Future task2 : des4, after des3, 5d section Critical tasks Completed task in the critical line :crit, done, 2014-01-06,24h Implement parser and jison :crit, done, after des1, 2d Create tests for parser :crit, active, 3d Future task in critical line :crit, 5d Create tests for renderer :2d Add to mermaid :1d \r円グラフ { {\u0026lt; mermaid \u0026gt;}} pie \u0026quot;iOS\u0026quot;: 45.2 \u0026quot;iPhone\u0026quot;: 17.2 \u0026quot;PHP\u0026quot;: 8.6 \u0026quot;Objective-C\u0026quot;: 6.5 \u0026quot;Swift\u0026quot;: 6.5 \u0026quot;Xcode\u0026quot;: 4 \u0026quot;Laravel\u0026quot;: 3 \u0026quot;Realm\u0026quot;: 3 \u0026quot;Android\u0026quot;: 3 \u0026quot;Others\u0026quot;: 2 { {\u0026lt; /mermaid \u0026gt;}} \rpie \"iOS\": 45.2 \"iPhone\": 17.2 \"PHP\": 8.6 \"Objective-C\": 6.5 \"Swift\": 6.5 \"Xcode\": 4 \"Laravel\": 3 \"Realm\": 3 \"Android\": 3 \"Others\": 2 \r"
+},
+{
+	"uri": "http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%A1%A8%E7%8F%BE%E6%96%B9%E6%B3%95learn/",
+	"title": "ページの表現方法（Learnテーマ）",
+	"tags": [],
+	"description": "",
+	"content": "Capter   章の扉のページをそれらしい体裁で生成\n  以下のコマンドを実行\n$ hugo new --kind chapter \u0026lt;name\u0026gt;/_index.md   content//_index.md が生成される。以下のような Front Matterが付く\n+++ title = \u0026#34;\u0026lt;name\u0026gt;\u0026#34; date = 2021-09-28T14:27:04+09:00 weight = 5 chapter = true pre = \u0026#34;\u0026lt;b\u0026gt;X. \u0026lt;/b\u0026gt;\u0026#34; +++ ### Chapter X # Some Chapter title Lorem Ipsum.   章番号や説明文などで上書きする。\n+++ title = \u0026#34;Introduction\u0026#34; date = 2021-09-28T14:27:04+09:00 weight = 5 chapter = true pre = \u0026#34;\u0026lt;b\u0026gt;1. \u0026lt;/b\u0026gt;\u0026#34; +++ ### Chapter 1 # Introduction Hugoの紹介をします。   参照→章見出しのページサンプル\n"
+},
+{
+	"uri": "http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%A1%A8%E7%8F%BE%E6%96%B9%E6%B3%95docsy/",
+	"title": "ページの表現方法（Docsyテーマ）",
+	"tags": [],
+	"description": "",
+	"content": "Docsy   https://github.com/google/docsy\n  結構本格的だが、まだちょっと使ってみた程度でよく分からない点多い。\n  Googleが提供している安心感\n  node.js のモジュールを2個くらい入れる必要あり\n  Mermaidのほか、マインドマップや数式も割と簡単に書ける。PlantUMLはPlantUMLサーバでレンダリングする必要があり微妙かも\n  ページ内目次が出るスタイルが使いやすそう\n  "
+},
+{
+	"uri": "http://example.org/how-to-use/%E3%82%BF%E3%82%B0/",
+	"title": "タグ",
+	"tags": ["foo", "bar", "baz"],
+	"description": "",
+	"content": "  タグを追加したい 各ページの front matter に以下のように記載\ntags: [\u0026#34;foo\u0026#34;, \u0026#34;bar\u0026#34;, \u0026#34;baz\u0026#34;]   これだけでタグが表現される(このページの上部に表示されている)。\n  左のペインにも出すなら、config.toml に以下を記載\n[[menu.shortcuts]] name = \u0026#34;\u0026lt;i class=\u0026#39;fas fa-tags\u0026#39;\u0026gt;\u0026lt;/i\u0026gt; Tags\u0026#34; url = \u0026#34;/tags\u0026#34; weight = 30   "
+},
+{
+	"uri": "http://example.org/how-to-use/%E7%94%BB%E5%83%8F%E3%82%92%E8%B2%BC%E3%82%8B/",
+	"title": "画像を貼る",
+	"tags": [],
+	"description": "",
+	"content": "static ディレクトリに置く   static/images/garamon.jpg という画像を配置し、以下を記載\n ![ガラモン](/images/garamon.jpg)   mdファイルと同じディレクトリに置く   画像とMarkdownを同じディレクトリに置くことで管理が容易になる。かも知れない。\n  やり方は「Hugo Page Bundle」でggr。Markdownファイルは _index.md か index.md でないといけないとか記載ルールあり。\n  "
+},
+{
+	"uri": "http://example.org/tags/bar/",
+	"title": "bar",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://example.org/tags/baz/",
+	"title": "baz",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://example.org/tags/foo/",
+	"title": "foo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://example.org/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://example.org/install-and-setting/hugo%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/",
+	"title": "Hugoのインストール",
+	"tags": [],
+	"description": "",
+	"content": "Hugoのインストール  https://github.com/gohugoio/hugo/releases にアクセス hugo_extended_0.nn.n_Windows-64bit.zip をダウンロード(extended というのを使う) 適当なフォルダーに展開して、PATHを通す  例 c:\\tools\\Hugo\\    "
+},
+{
+	"uri": "http://example.org/install-and-setting/learn%E3%83%86%E3%83%BC%E3%83%9E%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/",
+	"title": "Learnテーマのインストール",
+	"tags": [],
+	"description": "",
+	"content": "参考: Learnテーマのサイト  https://github.com/matcornic/hugo-theme-learn  導入手順   Learnテーマを適用するサイトのディレクトリを作成する。\n どこでも良いので作業ディレクトリを作って、Git bashを開く。 Git bash シェルで以下を入力（サイトのフォルダ名を SampleSite とした場合）  $ hugo new site SampleSite   作業ディレクトリ直下に \u0026ldquo;SampleSite\u0026quot;というディレクトリができる。 このディレクトリをここでは便宜上「ルートディレクトリ」と呼ぶ。\n  以下のようなファイル/ディレクトリが生成される\n$ ls -F archetypes/ content/ layouts/ resources/ themes/ config.toml data/ static/   Learnテーマを導入する。ルートディレクトの下にある themes ディレクトリに移動し、Git で cloneする\n$ cd SampleSite/themes $ git clone https://github.com/matcornic/hugo-theme-learn.git   ルートディレクト直下にある config.tomlを編集する。\nbaseURL = \u0026#39;http://example.org/\u0026#39; languageCode = \u0026#39;ja\u0026#39; # 言語コードを ja にします。 title = \u0026#39;My New Hugo Site\u0026#39; theme = \u0026#39;hugo-theme-learn\u0026#39; # この行を追加します。   ローカルサーバによる表示確認   HugoにはWebサーバ機能があるので、ルートディレクト上でそれを起動する。\n$ pwd /c/workdir/SampleSite $ hugo server -D   ブラウザから、localhost:1313 にアクセスすると、デフォルトの画面が表示される。\n  "
+},
+{
+	"uri": "http://example.org/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "HUGO(＆Learnテーマ)の紹介 \rIntroduction\r\r\r\rHugoとは\r\r\r\r\r\rInstall and setting\r\r\r\r準備\r\r\r\r\rHugoのインストール\r\r\r\r\rLearnテーマのインストール\r\r\r\r\r\rHow to Use\r\r\r\rホームページの追加\r\r\r\r\rページの追加\r\r\r\r\rページの順序を指定する\r\r\r\r\rスタイルのカスタマイズ\r\r\r\r\rコンテンツのデプロイ\r\r\r\r\rページの表現方法\r\r\r\r\rページの表現方法（Learnテーマ）\r\r\r\r\rページの表現方法（Docsyテーマ）\r\r\r\r\rタグ\r\r\r\r\r画像を貼る\r\r\r\r\r\r"
+},
+{
+	"uri": "http://example.org/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

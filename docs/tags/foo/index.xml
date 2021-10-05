@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>foo on My New Hugo Site</title>
+    <link>http://example.org/tags/foo/</link>
+    <description>Recent content in foo on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Sep 2021 16:53:07 +0900</lastBuildDate><atom:link href="http://example.org/tags/foo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ホームページの追加</title>
+      <link>http://example.org/how-to-use/%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%BF%BD%E5%8A%A0/</link>
+      <pubDate>Fri, 10 Sep 2021 16:53:07 +0900</pubDate>
+      
+      <guid>http://example.org/how-to-use/%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%BF%BD%E5%8A%A0/</guid>
+      <description>ホームページに自分の文章を入れる   _index.md を作る。ルートディレクトで以下を実行。
+$ hugo new _index.md   content/_index.md というファイルができる。
+--- title: &amp;#34;&amp;#34; date: 2021-09-10T15:32:15+09:00 draft: true ---   上記のようにヘッダ（Front matterと呼ぶ）が自動生成されるので、その下にMarkdown文法で内容を追記する。
+--- title: &amp;#34;ホームページの追加&amp;#34; date: 2021-09-10T16:53:07+09:00 draft: true weight: 10 tags: [&amp;#34;foo&amp;#34;, &amp;#34;bar&amp;#34;] --- ### ホームページに自分の文章を入れる * _index.md を作る。ルートディレクトで以下を実行。 ```shell $ hugo new _index.md ``` * content/_index.md というファイルができる。 ```toml --- title: &amp;#34;&amp;#34; date: 2021-09-10T15:32:15+09:00 draft: true --- ``` * 上記のようにヘッダ（Front matterと呼ぶ）が自動生成されるので、その下にMarkdown文法で内容を追記する。   </description>
+    </item>
+    
+    <item>
+      <title>タグ</title>
+      <link>http://example.org/how-to-use/%E3%82%BF%E3%82%B0/</link>
+      <pubDate>Fri, 10 Sep 2021 16:53:07 +0900</pubDate>
+      
+      <guid>http://example.org/how-to-use/%E3%82%BF%E3%82%B0/</guid>
+      <description>  タグを追加したい 各ページの front matter に以下のように記載
+tags: [&amp;#34;foo&amp;#34;, &amp;#34;bar&amp;#34;, &amp;#34;baz&amp;#34;]   これだけでタグが表現される(このページの上部に表示されている)。
+  左のペインにも出すなら、config.toml に以下を記載
+[[menu.shortcuts]] name = &amp;#34;&amp;lt;i class=&amp;#39;fas fa-tags&amp;#39;&amp;gt;&amp;lt;/i&amp;gt; Tags&amp;#34; url = &amp;#34;/tags&amp;#34; weight = 30   </description>
+    </item>
+    
+  </channel>
+</rss>

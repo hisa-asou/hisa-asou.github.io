@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on My New Hugo Site</title>
+    <link>http://example.org/introduction/</link>
+    <description>Recent content in Introduction on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Sep 2021 17:26:36 +0900</lastBuildDate><atom:link href="http://example.org/introduction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugoとは</title>
+      <link>http://example.org/introduction/hugo%E3%81%A8%E3%81%AF/</link>
+      <pubDate>Fri, 10 Sep 2021 15:44:46 +0900</pubDate>
+      
+      <guid>http://example.org/introduction/hugo%E3%81%A8%E3%81%AF/</guid>
+      <description>HUGOとは TBD
+ドキュメントツールとしてのPros&amp;amp;Cons Pros  導入が比較的簡単。 Markdown なのでポータビリティはまあまあ高い。 見た目にこだわらなければ、労力をかけずにそこそこきれいなものができる。 テキストファイルなので、Git等によるコンテンツ管理が容易そう。 Webブラウザでほぼリアルタイムにプレビューを見ながら作業できる。  Cons  ファイルが多くなりがち、その分管理が煩雑になるかも コンテンツファイルはMarkdownだが、Hugo特有の記載も混ざり込む。こんな感じの制御用ヘッダ(Front Matterという部分) --- title: &amp;quot;Hugoとは&amp;quot; date: 2021-09-10T15:44:46+09:00 draft: true weight: 10 --- ## HUGOとは TBD ## ドキュメントツールとしてのPros&amp;amp;Cons  同様に、Theme特有の記載も混入するので、Theme の変更もそれなりに手間と思われる。 文書作成はテキストエディタなので、Confluence等に比べるとリッチテキストの編集サポート機能は低い html コンテンツを作成することはできるが、公開は別途仕掛けが必要。例えばこの文書自体もどうやって共有するのが良いか？  Even   表現力は、良くも悪くもMarkdown。
+  スタイルの統一も一長一短。 統一感を出すには、使用する見出しレベルその他の規約を決める必要がある。 しかしフォントその他の体裁はcssで統一的に制御できる。
+  Mermail.js で簡単な絵が描けるとはいえ、そんな高度なのはできなさそう。文章以外の図表をどうするかは課題。
+ 添付ファイルは貼れるが、ダウンロードして参照するのは一手間かかる。    </description>
+    </item>
+    
+  </channel>
+</rss>

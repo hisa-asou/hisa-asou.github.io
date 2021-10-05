@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bar on My New Hugo Site</title>
+    <link>http://example.org/tags/bar/</link>
+    <description>Recent content in bar on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Sep 2021 16:53:07 +0900</lastBuildDate><atom:link href="http://example.org/tags/bar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ホームページの追加</title>
+      <link>http://example.org/how-to-use/%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%BF%BD%E5%8A%A0/</link>
+      <pubDate>Fri, 10 Sep 2021 16:53:07 +0900</pubDate>
+      
+      <guid>http://example.org/how-to-use/%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%BF%BD%E5%8A%A0/</guid>
+      <description>ホームページに自分の文章を入れる   _index.md を作る。ルートディレクトで以下を実行。
+$ hugo new _index.md   content/_index.md というファイルができる。
+--- title: &amp;#34;&amp;#34; date: 2021-09-10T15:32:15+09:00 draft: true ---   上記のようにヘッダ（Front matterと呼ぶ）が自動生成されるので、その下にMarkdown文法で内容を追記する。
+--- title: &amp;#34;ホームページの追加&amp;#34; date: 2021-09-10T16:53:07+09:00 draft: true weight: 10 tags: [&amp;#34;foo&amp;#34;, &amp;#34;bar&amp;#34;] --- ### ホームページに自分の文章を入れる * _index.md を作る。ルートディレクトで以下を実行。 ```shell $ hugo new _index.md ``` * content/_index.md というファイルができる。 ```toml --- title: &amp;#34;&amp;#34; date: 2021-09-10T15:32:15+09:00 draft: true --- ``` * 上記のようにヘッダ（Front matterと呼ぶ）が自動生成されるので、その下にMarkdown文法で内容を追記する。   </description>
+    </item>
+    
+    <item>
+      <title>ページの追加</title>
+      <link>http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%BF%BD%E5%8A%A0/</link>
+      <pubDate>Fri, 10 Sep 2021 16:53:07 +0900</pubDate>
+      
+      <guid>http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%BF%BD%E5%8A%A0/</guid>
+      <description>ページの追加   ページは、content 直下のディレクトリ構造で階層的に作れる。
+  ページの追加には hugo new コマンドを使う。
+  例えば、Introduction という第1階層の下に、readme.md というページを作るとすると、ルートディレクトリ上で以下のコマンドを実行する。
+$ hugo new Introduction/readme.md   上記で、content の下に Introduction というディレクトリができ、その下に readme.md というファイルができる。
+  中身は、このファイルにMarkdownで書いていけば良い。
+  生成されたmdには、以下のようなヘッダ情報が出力される。この部分を「front matter」と呼ぶ。
+ front matterは TOML/YAML/JSONなどの形式で書ける（デリミタが&amp;mdash;ならYAML、+++ならTOMLのように） --- title: &amp;#34;&amp;#34; date: 2021-09-10T15:32:15+09:00 draft: true ---     ファイル名やディレクトリ名を間違えたら？
+ 単に content 配下のディレクトリ名やファイル名を直せば良い。 hugo new を使うと、ヘッダ部(front matter)があらかじめ設定されたひな形ができるが、それだけのようだ（はっきりとは分からないが） だから、既に作ったページを単にコピーしてファイル名を変えれば新しいページが追加できる。    セクション Content 配下のディレクトリには、セクションと呼ばれるものがある。セクションとして扱われる条件は以下のいずれか。
+ Content直下（第一階層） ディレクトリ内に _index.</description>
+    </item>
+    
+    <item>
+      <title>ページの順序を指定する</title>
+      <link>http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E9%A0%86%E5%BA%8F%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B/</link>
+      <pubDate>Fri, 10 Sep 2021 16:53:07 +0900</pubDate>
+      
+      <guid>http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E9%A0%86%E5%BA%8F%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B/</guid>
+      <description>同一レベルのメニュー階層およびページの順序を指定する  各 md ファイルに、weight パラメータを設定する。  --- title: &amp;#34;Introduction&amp;#34; date: 2021-09-11T17:26:36+09:00 draft: true weight: 10 # この行を追加 ---  同じ階層であれば、weight の値が小さい方が上になる。 階層を表すフォルダの順序は、そのフォルダ直下にある _index.md に weight パラメータを書く。_index.md は自動では作られないので自分で作る。 順序の設定方法はほかにもいろいろありそうだが、とりあえず分かりやすい方法で。  </description>
+    </item>
+    
+    <item>
+      <title>タグ</title>
+      <link>http://example.org/how-to-use/%E3%82%BF%E3%82%B0/</link>
+      <pubDate>Fri, 10 Sep 2021 16:53:07 +0900</pubDate>
+      
+      <guid>http://example.org/how-to-use/%E3%82%BF%E3%82%B0/</guid>
+      <description>  タグを追加したい 各ページの front matter に以下のように記載
+tags: [&amp;#34;foo&amp;#34;, &amp;#34;bar&amp;#34;, &amp;#34;baz&amp;#34;]   これだけでタグが表現される(このページの上部に表示されている)。
+  左のペインにも出すなら、config.toml に以下を記載
+[[menu.shortcuts]] name = &amp;#34;&amp;lt;i class=&amp;#39;fas fa-tags&amp;#39;&amp;gt;&amp;lt;/i&amp;gt; Tags&amp;#34; url = &amp;#34;/tags&amp;#34; weight = 30   </description>
+    </item>
+    
+  </channel>
+</rss>

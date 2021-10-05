@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>How to Use on My New Hugo Site</title>
+    <link>http://example.org/how-to-use/</link>
+    <description>Recent content in How to Use on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Sep 2021 17:25:12 +0900</lastBuildDate><atom:link href="http://example.org/how-to-use/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ホームページの追加</title>
+      <link>http://example.org/how-to-use/%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%BF%BD%E5%8A%A0/</link>
+      <pubDate>Fri, 10 Sep 2021 16:53:07 +0900</pubDate>
+      
+      <guid>http://example.org/how-to-use/%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%BF%BD%E5%8A%A0/</guid>
+      <description>ホームページに自分の文章を入れる   _index.md を作る。ルートディレクトで以下を実行。
+$ hugo new _index.md   content/_index.md というファイルができる。
+--- title: &amp;#34;&amp;#34; date: 2021-09-10T15:32:15+09:00 draft: true ---   上記のようにヘッダ（Front matterと呼ぶ）が自動生成されるので、その下にMarkdown文法で内容を追記する。
+--- title: &amp;#34;ホームページの追加&amp;#34; date: 2021-09-10T16:53:07+09:00 draft: true weight: 10 tags: [&amp;#34;foo&amp;#34;, &amp;#34;bar&amp;#34;] --- ### ホームページに自分の文章を入れる * _index.md を作る。ルートディレクトで以下を実行。 ```shell $ hugo new _index.md ``` * content/_index.md というファイルができる。 ```toml --- title: &amp;#34;&amp;#34; date: 2021-09-10T15:32:15+09:00 draft: true --- ``` * 上記のようにヘッダ（Front matterと呼ぶ）が自動生成されるので、その下にMarkdown文法で内容を追記する。   </description>
+    </item>
+    
+    <item>
+      <title>ページの追加</title>
+      <link>http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%BF%BD%E5%8A%A0/</link>
+      <pubDate>Fri, 10 Sep 2021 16:53:07 +0900</pubDate>
+      
+      <guid>http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%BF%BD%E5%8A%A0/</guid>
+      <description>ページの追加   ページは、content 直下のディレクトリ構造で階層的に作れる。
+  ページの追加には hugo new コマンドを使う。
+  例えば、Introduction という第1階層の下に、readme.md というページを作るとすると、ルートディレクトリ上で以下のコマンドを実行する。
+$ hugo new Introduction/readme.md   上記で、content の下に Introduction というディレクトリができ、その下に readme.md というファイルができる。
+  中身は、このファイルにMarkdownで書いていけば良い。
+  生成されたmdには、以下のようなヘッダ情報が出力される。この部分を「front matter」と呼ぶ。
+ front matterは TOML/YAML/JSONなどの形式で書ける（デリミタが&amp;mdash;ならYAML、+++ならTOMLのように） --- title: &amp;#34;&amp;#34; date: 2021-09-10T15:32:15+09:00 draft: true ---     ファイル名やディレクトリ名を間違えたら？
+ 単に content 配下のディレクトリ名やファイル名を直せば良い。 hugo new を使うと、ヘッダ部(front matter)があらかじめ設定されたひな形ができるが、それだけのようだ（はっきりとは分からないが） だから、既に作ったページを単にコピーしてファイル名を変えれば新しいページが追加できる。    セクション Content 配下のディレクトリには、セクションと呼ばれるものがある。セクションとして扱われる条件は以下のいずれか。
+ Content直下（第一階層） ディレクトリ内に _index.</description>
+    </item>
+    
+    <item>
+      <title>ページの順序を指定する</title>
+      <link>http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E9%A0%86%E5%BA%8F%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B/</link>
+      <pubDate>Fri, 10 Sep 2021 16:53:07 +0900</pubDate>
+      
+      <guid>http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E9%A0%86%E5%BA%8F%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B/</guid>
+      <description>同一レベルのメニュー階層およびページの順序を指定する  各 md ファイルに、weight パラメータを設定する。  --- title: &amp;#34;Introduction&amp;#34; date: 2021-09-11T17:26:36+09:00 draft: true weight: 10 # この行を追加 ---  同じ階層であれば、weight の値が小さい方が上になる。 階層を表すフォルダの順序は、そのフォルダ直下にある _index.md に weight パラメータを書く。_index.md は自動では作られないので自分で作る。 順序の設定方法はほかにもいろいろありそうだが、とりあえず分かりやすい方法で。  </description>
+    </item>
+    
+    <item>
+      <title>スタイルのカスタマイズ</title>
+      <link>http://example.org/how-to-use/%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</link>
+      <pubDate>Fri, 10 Sep 2021 16:53:07 +0900</pubDate>
+      
+      <guid>http://example.org/how-to-use/%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/</guid>
+      <description>参考ページ  ここに記載あり  https://learn.netlify.app/en/basics/style-customization/    ロゴの変更(Learn)   layouts/partials/logo.html というファイルを作り、img タグや SVGを書く。igmなどで参照する画像は static の下に置く。
+  例
+&amp;lt;img border=&amp;#34;0&amp;#34; src=&amp;#34;ulsystems-logo.png&amp;#34;&amp;gt;   Homeページ以外ではロゴが表示されないな… 要調査
+  Favicon(Learn)  ファビコンのpngを static/images/favicon.png という名前で置く  デフォルトカラーの変更(Learn)   red, green, blue から選べる。
+  これ以外に自分でも定義できる。(https://learn.netlify.app/en/basics/style-customization/ の「&amp;lsquo;Yours&amp;rsquo; variant」)
+  config.toml に以下を記載(blueの場合)
+[params] # Change default color scheme with a variant one. Can be &amp;#34;red&amp;#34;, &amp;#34;blue&amp;#34;, &amp;#34;green&amp;#34;. themeVariant = &amp;#34;blue&amp;#34;   フォント等の変更（css変更） (Hugo) css をオーバーライドしてスタイルを変更する。</description>
+    </item>
+    
+    <item>
+      <title>コンテンツのデプロイ</title>
+      <link>http://example.org/how-to-use/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4/</link>
+      <pubDate>Fri, 10 Sep 2021 16:53:07 +0900</pubDate>
+      
+      <guid>http://example.org/how-to-use/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4/</guid>
+      <description>コンテンツのデプロイ  引数なし、または -Dオプションだけ付けて hugo コマンドを実行する。  $ hugo -D  -D は、Draft のページも出力するオプション。 このコマンドを実行すると、public というディレクトができ、その配下にコンテンツができる。 このファイルをHTTPサーバのコンテンツのフォルダ(例えば nginx/html )にコピーすると、コンテンツが表示できる。 しかし例えばプロジェクト内でドキュメントをシェアするときはどうする？  </description>
+    </item>
+    
+    <item>
+      <title>ページの表現方法</title>
+      <link>http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%A1%A8%E7%8F%BE%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Fri, 10 Sep 2021 16:53:07 +0900</pubDate>
+      
+      <guid>http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%A1%A8%E7%8F%BE%E6%96%B9%E6%B3%95/</guid>
+      <description>基本  Markdownの文法が使える。 全部試してないけどたぶん見出し、箇条書き、強調、下線、取り消し線、引用、コードブロック、水平線…は書けるだろう  表 | 左寄せ | 中央寄せ | 右寄せ | |:---------|:--------:|---------:| | 朝日新聞 | 読売新聞 | 産経新聞 |    左寄せ 中央寄せ 右寄せ     朝日新聞 読売新聞 産経新聞    他ページへのリンク   contents からの相対パスで簡単に参照できるようだ。
+参照→[Hugoのインストール]({{＜ ref &amp;#34;/Install and setting/Hugoのインストール.md&amp;#34; &amp;gt;}}) # (コピペする場合は＜を半角の &amp;lt; にしてください。文字化けしてしまうので全角にしています)   参照→Hugoのインストール
+部分的に文字の色を変える   Markdownには色を変える文法はないので、HTMLで記述する。デフォルトだとHugoのパーサがHTMLタグを削ってしまうので、config.tomlに以下を記載（コンテンツ全体に効いちゃうので注意）
+[markup.goldmark.renderer] unsafe= true   文字の色を変える部分の記述
+ここだけ&amp;lt;span style=&amp;#34;color: blue; &amp;#34;&amp;gt;青色&amp;lt;/span&amp;gt;の文字 ここだけ青色の文字</description>
+    </item>
+    
+    <item>
+      <title>ページの表現方法（Learnテーマ）</title>
+      <link>http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%A1%A8%E7%8F%BE%E6%96%B9%E6%B3%95learn/</link>
+      <pubDate>Fri, 10 Sep 2021 16:53:07 +0900</pubDate>
+      
+      <guid>http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%A1%A8%E7%8F%BE%E6%96%B9%E6%B3%95learn/</guid>
+      <description>Capter   章の扉のページをそれらしい体裁で生成
+  以下のコマンドを実行
+$ hugo new --kind chapter &amp;lt;name&amp;gt;/_index.md   content//_index.md が生成される。以下のような Front Matterが付く
++++ title = &amp;#34;&amp;lt;name&amp;gt;&amp;#34; date = 2021-09-28T14:27:04+09:00 weight = 5 chapter = true pre = &amp;#34;&amp;lt;b&amp;gt;X. &amp;lt;/b&amp;gt;&amp;#34; +++ ### Chapter X # Some Chapter title Lorem Ipsum.   章番号や説明文などで上書きする。
++++ title = &amp;#34;Introduction&amp;#34; date = 2021-09-28T14:27:04+09:00 weight = 5 chapter = true pre = &amp;#34;&amp;lt;b&amp;gt;1. &amp;lt;/b&amp;gt;&amp;#34; +++ ### Chapter 1 # Introduction Hugoの紹介をします。   参照→章見出しのページサンプル</description>
+    </item>
+    
+    <item>
+      <title>ページの表現方法（Docsyテーマ）</title>
+      <link>http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%A1%A8%E7%8F%BE%E6%96%B9%E6%B3%95docsy/</link>
+      <pubDate>Fri, 10 Sep 2021 16:53:07 +0900</pubDate>
+      
+      <guid>http://example.org/how-to-use/%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E8%A1%A8%E7%8F%BE%E6%96%B9%E6%B3%95docsy/</guid>
+      <description>Docsy   https://github.com/google/docsy
+  結構本格的だが、まだちょっと使ってみた程度でよく分からない点多い。
+  Googleが提供している安心感
+  node.js のモジュールを2個くらい入れる必要あり
+  Mermaidのほか、マインドマップや数式も割と簡単に書ける。PlantUMLはPlantUMLサーバでレンダリングする必要があり微妙かも
+  ページ内目次が出るスタイルが使いやすそう
+  </description>
+    </item>
+    
+    <item>
+      <title>タグ</title>
+      <link>http://example.org/how-to-use/%E3%82%BF%E3%82%B0/</link>
+      <pubDate>Fri, 10 Sep 2021 16:53:07 +0900</pubDate>
+      
+      <guid>http://example.org/how-to-use/%E3%82%BF%E3%82%B0/</guid>
+      <description>  タグを追加したい 各ページの front matter に以下のように記載
+tags: [&amp;#34;foo&amp;#34;, &amp;#34;bar&amp;#34;, &amp;#34;baz&amp;#34;]   これだけでタグが表現される(このページの上部に表示されている)。
+  左のペインにも出すなら、config.toml に以下を記載
+[[menu.shortcuts]] name = &amp;#34;&amp;lt;i class=&amp;#39;fas fa-tags&amp;#39;&amp;gt;&amp;lt;/i&amp;gt; Tags&amp;#34; url = &amp;#34;/tags&amp;#34; weight = 30   </description>
+    </item>
+    
+    <item>
+      <title>画像を貼る</title>
+      <link>http://example.org/how-to-use/%E7%94%BB%E5%83%8F%E3%82%92%E8%B2%BC%E3%82%8B/</link>
+      <pubDate>Fri, 10 Sep 2021 16:53:07 +0900</pubDate>
+      
+      <guid>http://example.org/how-to-use/%E7%94%BB%E5%83%8F%E3%82%92%E8%B2%BC%E3%82%8B/</guid>
+      <description>static ディレクトリに置く   static/images/garamon.jpg という画像を配置し、以下を記載
+ ![ガラモン](/images/garamon.jpg)   mdファイルと同じディレクトリに置く   画像とMarkdownを同じディレクトリに置くことで管理が容易になる。かも知れない。
+  やり方は「Hugo Page Bundle」でggr。Markdownファイルは _index.md か index.md でないといけないとか記載ルールあり。
+  </description>
+    </item>
+    
+  </channel>
+</rss>
