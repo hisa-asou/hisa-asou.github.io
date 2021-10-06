@@ -63,6 +63,13 @@
 	"content": "参考ページ  ここに記載あり  https://learn.netlify.app/en/basics/style-customization/    ロゴの変更(Learn)   layouts/partials/logo.html というファイルを作り、img タグや SVGを書く。igmなどで参照する画像は static の下に置く。\n  例\n\u0026lt;img border=\u0026#34;0\u0026#34; src=\u0026#34;ulsystems-logo.png\u0026#34;\u0026gt;   Homeページ以外ではロゴが表示されないな… 要調査\n  Favicon(Learn)  ファビコンのpngを static/images/favicon.png という名前で置く  デフォルトカラーの変更(Learn)   red, green, blue から選べる。\n  これ以外に自分でも定義できる。(https://learn.netlify.app/en/basics/style-customization/ の「\u0026lsquo;Yours\u0026rsquo; variant」)\n  config.toml に以下を記載(blueの場合)\n[params] # Change default color scheme with a variant one. Can be \u0026#34;red\u0026#34;, \u0026#34;blue\u0026#34;, \u0026#34;green\u0026#34;. themeVariant = \u0026#34;blue\u0026#34;   フォント等の変更（css変更） (Hugo) css をオーバーライドしてスタイルを変更する。\n  static ディレクトリの下に css ファイルを置く。例えば static/css/custom-css.css\n  config.toml で css ファイルを指定\n[params] custom_css = [\u0026#34;css/custom-css.css\u0026#34;]   カスタムcss の記述例: 見出しと本文のフォント変更、h2 以降の見出しに下線など\nbody, h1, h2, h3, h4, h5, h6 { font-family:\u0026quot;BIZ UDPゴシック\u0026quot;; } h2, h3, h4, h5, h6 { text-decoration: underline; }   "
 },
 {
+	"uri": "http://example.org/hosting/",
+	"title": "Hosting",
+	"tags": [],
+	"description": "",
+	"content": "Chapter 4 Hosting \rWebホスティングについて\r\r\r\r\r"
+},
+{
 	"uri": "http://example.org/how-to-use/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%81%AE%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4/",
 	"title": "コンテンツのデプロイ",
 	"tags": [],
@@ -103,6 +110,13 @@
 	"tags": [],
 	"description": "",
 	"content": "static ディレクトリに置く   static/images/garamon.jpg という画像を配置し、以下を記載\n ![ガラモン](/images/garamon.jpg)   mdファイルと同じディレクトリに置く   画像とMarkdownを同じディレクトリに置くことで管理が容易になる。かも知れない。\n  やり方は「Hugo Page Bundle」でggr。Markdownファイルは _index.md か index.md でないといけないとか記載ルールあり。\n  "
+},
+{
+	"uri": "http://example.org/hosting/web%E3%83%9B%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/",
+	"title": "Webホスティングについて",
+	"tags": [],
+	"description": "",
+	"content": "Webホスティングサービス 候補    サービスなど 提供 メモ     GitHub Pages GitHub    GitLab Pages GitLab GitHub Pagesと同じようなものらしい。GitLabって本部にあるという話だったような？   Netlify Netlify    Azure Static Web Apps Microsoft ソースはGitHub前提   などなど      参考記事など   静的 Web サイトホスティングサービス比較\n  静的webホスティング徹底比較！新サービスAzure Static Web Apps vs 既存サービス\n  GitHub PagesとGitLab Pagesの比較 ちょっと古いかな\n  こっちの方が良いか BlogやるならGitLab Pagesがおすすめ\n  GitHub Pages  やってみた github プロジェクト名が固定(username.github.io)なのでGitHubアカウントで1個のサイトしか使えない。 Markdown のソースを編集して、HTMLをbuildして commit/push するだけなので個人作業としては簡単 まあ認証をどうするかとかあるから難しい気はします。  "
 },
 {
 	"uri": "http://example.org/tags/bar/",
@@ -151,7 +165,7 @@
 	"title": "",
 	"tags": [],
 	"description": "",
-	"content": "HUGO(＆Learnテーマ)の紹介 \rIntroduction\r\r\r\rHugoとは\r\r\r\r\r\rInstall and setting\r\r\r\r準備\r\r\r\r\rHugoのインストール\r\r\r\r\rLearnテーマのインストール\r\r\r\r\r\rHow to Use\r\r\r\rホームページの追加\r\r\r\r\rページの追加\r\r\r\r\rページの順序を指定する\r\r\r\r\rスタイルのカスタマイズ\r\r\r\r\rコンテンツのデプロイ\r\r\r\r\rページの表現方法\r\r\r\r\rページの表現方法（Learnテーマ）\r\r\r\r\rページの表現方法（Docsyテーマ）\r\r\r\r\rタグ\r\r\r\r\r画像を貼る\r\r\r\r\r\r"
+	"content": "HUGO(＆Learnテーマ)の紹介 \rIntroduction\r\r\r\rHugoとは\r\r\r\r\r\rInstall and setting\r\r\r\r準備\r\r\r\r\rHugoのインストール\r\r\r\r\rLearnテーマのインストール\r\r\r\r\r\rHow to Use\r\r\r\rホームページの追加\r\r\r\r\rページの追加\r\r\r\r\rページの順序を指定する\r\r\r\r\rスタイルのカスタマイズ\r\r\r\r\rコンテンツのデプロイ\r\r\r\r\rページの表現方法\r\r\r\r\rページの表現方法（Learnテーマ）\r\r\r\r\rページの表現方法（Docsyテーマ）\r\r\r\r\rタグ\r\r\r\r\r画像を貼る\r\r\r\r\r\rHosting\r\r\r\rWebホスティングについて\r\r\r\r\r\r"
 },
 {
 	"uri": "http://example.org/categories/",

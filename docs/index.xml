@@ -157,6 +157,19 @@ tags: [&amp;#34;foo&amp;#34;, &amp;#34;bar&amp;#34;, &amp;#34;baz&amp;#34;]   �
     </item>
     
     <item>
+      <title>Webホスティングについて</title>
+      <link>http://example.org/hosting/web%E3%83%9B%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</link>
+      <pubDate>Wed, 06 Oct 2021 10:02:24 +0900</pubDate>
+      
+      <guid>http://example.org/hosting/web%E3%83%9B%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/</guid>
+      <description>Webホスティングサービス 候補    サービスなど 提供 メモ     GitHub Pages GitHub    GitLab Pages GitLab GitHub Pagesと同じようなものらしい。GitLabって本部にあるという話だったような？   Netlify Netlify    Azure Static Web Apps Microsoft ソースはGitHub前提   などなど      参考記事など   静的 Web サイトホスティングサービス比較
+  静的webホスティング徹底比較！新サービスAzure Static Web Apps vs 既存サービス
+  GitHub PagesとGitLab Pagesの比較 ちょっと古いかな
+  こっちの方が良いか BlogやるならGitLab Pagesがおすすめ
+  GitHub Pages  やってみた github プロジェクト名が固定(username.</description>
+    </item>
+    
+    <item>
       <title>Hugoのインストール</title>
       <link>http://example.org/install-and-setting/hugo%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/</link>
       <pubDate>Fri, 10 Sep 2021 15:54:37 +0900</pubDate>
